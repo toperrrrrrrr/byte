@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Login from "./Login";
 import NotFound from "./NotFound";
+import Main from "./Main";
 
 function App() {
    return (
@@ -13,6 +14,7 @@ function App() {
          <Router>
             <Routes>
                <Route path="/" element={<Login />}></Route>
+               <Route path="/Main" element={<Main />}></Route>
                <Route path="*" element={<NotFound />} />
             </Routes>
          </Router>

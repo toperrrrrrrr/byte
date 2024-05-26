@@ -1,74 +1,192 @@
-import React from "react";
+import { React, useState } from "react";
+import illustLogin from "./res/imgs/illustLogin.svg";
 
 export default function Login() {
+   const [isEye, setEye] = useState("password");
+
+   const eye = () => {
+      if (isEye === "password") {
+         setEye("text");
+      } else setEye("password");
+   };
+
+   const hide = () => {
+      var login = document.getElementById("Login");
+      var register = document.getElementById("Register");
+      if (login.style.display === "none") {
+         login.style.display = "block";
+         register.style.display = "none";
+      } else {
+         login.style.display = "none";
+         register.style.display = "block";
+      }
+   };
+
    return (
       <div>
-         <section class="vh-100">
-            <div class="container py-5 h-100">
-               <div class="row d-flex align-items-center justify-content-center h-100">
-                  <div class="col-md-8 col-lg-7 col-xl-6">
+         <div className="vh-100">
+            <div className="container py-5 h-100">
+               <div className="row d-flex align-items-center justify-content-center h-100">
+                  <div className="col-md-8 col-lg-7 col-xl-6">
                      <img
-                        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
-                        class="img-fluid"
-                        alt="Phone image"
+                        src={illustLogin}
+                        className="img-fluid"
+                        alt="PhoneImage"
                      />
                   </div>
-                  <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-                     <form>
-                        <div data-mdb-input-init class="form-outline mb-4">
-                           <label class="form-label" for="form1Example13">
-                              Email address
+                  <div
+                     className="col-md-7 col-lg-5 col-xl-5 offset-xl-1"
+                     id="Login"
+                     style={{ display: "block" }}
+                  >
+                     <form action="/main" method="get">
+                        <div data-mdb-input-init className="form-outline mb-4">
+                           <label className="form-label" for="loginEmail">
+                              Username
                            </label>
                            <input
-                              type="email"
-                              id="form1Example13"
-                              class="form-control form-control-lg"
+                              type="text"
+                              id="loginEmail"
+                              className="form-control form-control-lg inputBorders"
                            />
                         </div>
 
-                        <div data-mdb-input-init class="form-outline mb-4">
-                           <input
-                              type="password"
-                              id="form1Example23"
-                              class="form-control form-control-lg"
-                           />
-                           <label class="form-label" for="form1Example23">
+                        <div data-mdb-input-init className="form-outline mb-4">
+                           <label className="form-label" for="loginPassword">
                               Password
                            </label>
+                           <input
+                              type={isEye}
+                              id="loginPassword"
+                              className="form-control form-control-lg inputBorders"
+                           />
                         </div>
 
-                        <div class="d-flex justify-content-around align-items-center mb-4">
-                           <div class="form-check">
+                        <div className="d-flex justify-content-around align-items-center mb-4">
+                           <div className="form-check">
                               <input
-                                 class="form-check-input"
+                                 className="form-check-input inputBorders"
                                  type="checkbox"
                                  value=""
                                  id="form1Example3"
-                                 checked
                               />
                               <label
-                                 class="form-check-label"
+                                 className="form-check-label"
                                  for="form1Example3"
                               >
                                  Remember me
                               </label>
                            </div>
+                           <div className="form-check">
+                              <input
+                                 className="form-check-input inputBorders"
+                                 type="checkbox"
+                                 value=""
+                                 id="showPassword"
+                                 onClick={eye}
+                              />
+                              <label
+                                 className="form-check-label"
+                                 for="showPassword"
+                              >
+                                 Show Password
+                              </label>
+                           </div>
                            <a href="#!">Forgot password?</a>
                         </div>
 
+                        <a href="/main">
+                           <button
+                              type="submit"
+                              data-mdb-button-init
+                              data-mdb-ripple-init
+                              className="btn btn-primary btn-lg btn-block"
+                           >
+                              Sign in
+                           </button>
+                        </a>
+
                         <button
-                           type="submit"
+                           type="button"
                            data-mdb-button-init
                            data-mdb-ripple-init
-                           class="btn btn-primary btn-lg btn-block"
+                           className="btn btn-primary btn-lg btn-block m-2"
+                           onClick={hide}
                         >
-                           Sign in
+                           Sign Up
                         </button>
+                     </form>
+                  </div>
+
+                  <div
+                     className="col-md-7 col-lg-5 col-xl-5 offset-xl-1"
+                     id="Register"
+                     style={{ display: "None" }}
+                  >
+                     <form action="/main" method="get">
+                        <div data-mdb-input-init className="form-outline mb-4">
+                           <label className="form-label" for="loginEmail">
+                              Username
+                           </label>
+                           <input
+                              type="text"
+                              id="loginEmail"
+                              className="form-control form-control-lg inputBorders"
+                           />
+                        </div>
+
+                        <div data-mdb-input-init className="form-outline mb-4">
+                           <label className="form-label" for="RegisterPassword">
+                              Password
+                           </label>
+                           <input
+                              type={isEye}
+                              id="RegisterPassword"
+                              className="form-control form-control-lg inputBorders"
+                           />
+                        </div>
+                        <div data-mdb-input-init className="form-outline mb-4">
+                           <label
+                              className="form-label"
+                              for="RegisterConfirmPassword"
+                           >
+                              Confirm Password
+                           </label>
+                           <input
+                              type={isEye}
+                              id="RegisterConfirmPassword"
+                              className="form-control form-control-lg inputBorders"
+                           />
+                        </div>
+                        <div data-mdb-input-init className="form-outline mb-4">
+                           <label
+                              className="form-label"
+                              for="RegisterAccessLevel"
+                           >
+                              Confirm Password
+                           </label>
+                           <input
+                              type={isEye}
+                              id="RegisterAccessLevel"
+                              className="form-control form-control-lg inputBorders"
+                           />
+                        </div>
+                        <div className="d-flex justify-content-around align-items-center mb-4">
+                           <button
+                              type="button"
+                              data-mdb-button-init
+                              data-mdb-ripple-init
+                              className="btn btn-primary btn-lg btn-block"
+                           >
+                              Register
+                           </button>
+                           <a href="#" onClick={hide}>Sign In</a>
+                        </div>
                      </form>
                   </div>
                </div>
             </div>
-         </section>
+         </div>
       </div>
    );
 }
