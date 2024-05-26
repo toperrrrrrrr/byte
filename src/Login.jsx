@@ -180,7 +180,9 @@ export default function Login() {
                            >
                               Register
                            </button>
-                           <a href="#" onClick={hide}>Sign In</a>
+                           <a href="#" onClick={hide}>
+                              Sign In
+                           </a>
                         </div>
                      </form>
                   </div>
