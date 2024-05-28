@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 
 export default function Main() {
    return (
@@ -8,25 +9,7 @@ export default function Main() {
          <div className="vh-100">
             <div className="container-fluid h-100">
                <div className="row vh-100">
-                  <div className="col-2 rounded sidebar">
-                     <div class="card mx-3 my-5">
-                        <div class="card-body">
-                           <h4 class="card-title">Byte LOGO placeholder</h4>
-                        </div>
-                     </div>
-                     <div class="card m-3 my-3">
-                        <div class="card-body">Dashboard</div>
-                     </div>
-                     <div class="card m-3 my-3">
-                        <div class="card-body">Another Button</div>
-                     </div>
-                     <div class="card m-3 my-3">
-                        <div class="card-body">hallo</div>
-                     </div>
-                     <div class="card m-3 my-3">
-                        <div class="card-body">hallo</div>
-                     </div>
-                  </div>
+                  <Sidebar />
                   <div className="col-10 dashboard">
                      <div class="container mt-3">
                         <h2>Toggleable Pills</h2>
