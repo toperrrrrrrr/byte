@@ -85,7 +85,6 @@ h6 {
 }
 
 /* 404 */
-
 .error-404 {
    padding: 30px;
 }
@@ -130,10 +129,9 @@ span {
 
 .sidebar {
    position: fixed;
-   top: 60px;
-   left: 0;
-   bottom: 0;
-   width: 300px;
+   top: 30px;
+   left: 30px;
+   bottom: 30px;
    z-index: 996;
    transition: all 0.3s;
    overflow-y: auto;
@@ -144,13 +142,11 @@ span {
 .sidebar-nav li {
    padding: 0;
    margin: 0;
-
    background-color: transparent;
    list-style: none;
 }
 .sidebar-nav .nav-item {
    margin-bottom: 5px;
-
    background-color: transparent;
 }
 
@@ -228,4 +224,29 @@ span {
    background-color: var(--secondaryBackground);
    padding: 10px 0 10px 40px;
    transition: 0.3s;
+}
+
+.rounded-ends {
+   border-radius: 0 30px 30px 0;
+}
+
+
+.logo{
+
+}
+
+.visualize{
+   border-style: ridge;
+}
+
+.colorize1{
+   background-color: red;
+}
+
+.colorize2{
+   background-color: green;
+}
+
+.colorize3{
+   background-color: blue;
 }

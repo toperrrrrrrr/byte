@@ -1,11 +1,21 @@
 import React from "react";
 
+import Logo from "../res/imgs/Hari.svg";
+
 export default function Sidebar() {
    return (
       <>
-         <aside className="col-2 rounded sidebar secondaryBg">
-            <div className=" mx-3 my-5 ">
-               <h1 className="secondaryBg brand">ByteMi</h1>
+         <aside className="sidebar secondaryBg col-2 rounded-ends">
+            <div
+               className="d-flex align-items-center justify-content-center mx-3 my-5 secondaryBg "
+               draggable="false"
+            >
+               <img
+                  src={Logo}
+                  alt="Hari"
+                  className="secondaryBg"
+                  draggable="false"
+               />
             </div>
 
             <ul className="sidebar-nav m-3" id="sidebar-nav">
