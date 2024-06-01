@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import illustLogin from "./res/imgs/illustLogin.svg";
+import illustLogin from "../res/imgs/illustLogin.svg";
 
 export default function Login() {
    const [isEye, setEye] = useState("password");

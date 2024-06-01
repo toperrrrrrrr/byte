@@ -1,4 +1,0 @@
-Focus on frontend first. Back end will come later. 
-Create grid system for dashboard 
-Update the middle part only instead of the whole page. 
-Dont forget that this is fun project, dont forget to have fun. 

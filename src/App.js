@@ -6,7 +6,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Login from "./Login";
+import Login from "./Login/Login";
 import NotFound from "./NotFound";
 import Main from "./Main";
 
