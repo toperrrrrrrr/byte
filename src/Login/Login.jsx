@@ -1,6 +1,4 @@
 import { React, useState } from "react";
-import illustLogin from "../res/imgs/illustLogin.svg";
-
 export default function Login() {
    const [isEye, setEye] = useState("password");
 
@@ -27,15 +25,8 @@ export default function Login() {
          <div className="vh-100">
             <div className="container py-5 h-100 ">
                <div className="row d-flex align-items-center justify-content-center h-100">
-                  <div className="col-md-8 col-lg-7 col-xl-6">
-                     <img
-                        src={illustLogin}
-                        className="img-fluid"
-                        alt="PhoneImage"
-                     />
-                  </div>
                   <div
-                     className="col-md-7 col-lg-5 col-xl-5 offset-xl-1"
+                     className="col-md-12 col-lg-5 col-xl-5 offset-xl-1"
                      id="Login"
                      style={{ display: "block" }}
                   >
