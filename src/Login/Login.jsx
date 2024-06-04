@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import Alerts from "../Alerts/Alerts";
 import "../res/fonts/material.css"
 import "./Login.css"
+import Axios from "axios"
 
 export default function Login() {
 
@@ -20,6 +21,17 @@ export default function Login() {
       handleClosePopup();
    };
 
+
+   const testbutton = async () => {
+      try {
+        await Axios.get(
+          `http://localhost:1127/test/`
+        );
+      
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
    const togglePasswordVisibility = () => {
       if (isEye === "password") {
@@ -79,7 +91,7 @@ export default function Login() {
                   </div>
 
 
-                  <div className="btn-wrap " >
+                  <div className="btn-wrap "  onClick={testbutton}>
                      <button className="btn-login">Login</button>
                   </div>
 
