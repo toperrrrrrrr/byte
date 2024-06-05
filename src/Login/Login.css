@@ -5,7 +5,8 @@
 
 .wrap-login {
    width: 500px;
-   background: #28293d;
+   background-color: rgba(40, 41, 61, 0.3);
+   backdrop-filter: blur(30px);
    border-radius: 20px;
    padding-top: 65px;
 }
