@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Axios from "axios";
 import Alerts from '../Alerts/Alerts';
-
 import Blobs from '../components/Blobs';
 
 export default function Register() {
