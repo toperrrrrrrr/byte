@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Axios from "axios";
 import Alerts from '../Alerts/Alerts';
 
+import Blobs from '../components/Blobs';
+
 export default function Register() {
     const [isNote, setNote] = useState("")
 
@@ -34,11 +36,13 @@ export default function Register() {
     };
 
     return (
-        <div>
+        <div className='mainBody'>
+
             <div className="bg">
+                <Blobs />
                 <div className="d-flex justify-content-center align-items-center vh-100">
                     <form className="wrap-login p-5">
-                        <span className="signin-title "> Sign Up </span>
+                        <span className="signin-title "> Sign in </span>
                         <div className="wrap-input w-100">
                             <span>Username</span>
                             <input
