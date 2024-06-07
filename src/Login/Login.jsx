@@ -98,7 +98,7 @@ export default function Login() {
 
                   <div className="text-center pt-115">
                      <span className="mutedText">Don’t have an account?</span>
-                     <a className="hyperlink" >
+                     <a className="hyperlink" href="/Register" >
                         Sign Up
                      </a>
                   </div>
