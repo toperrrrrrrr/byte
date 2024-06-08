@@ -1,17 +1,16 @@
 import { React, useState } from "react";
 import Alerts from "../Alerts/Alerts";
-import "../res/fonts/material.css"
-import "./Login.css"
-import Axios from "axios"
+import "../res/fonts/material.css";
+import "./Login.css";
+import Axios from "axios";
 
 export default function Login() {
-
    const [isUsername, setUsername] = useState("");
    const [isPassword, setPassword] = useState("");
    const [showPopup, setShowPopup] = useState(false);
    const [isPlaceholderPW, setPlaceholderPW] = useState("*******************");
    const [isEye, setEye] = useState("password");
-
+   const [message, setMessage] = useState("");
 
    const handleClosePopup = () => {
       setShowPopup(false);
@@ -21,17 +20,27 @@ export default function Login() {
       handleClosePopup();
    };
 
-
-   const testbutton = async () => {
+   const handleSubmit = async (e) => {
+      e.preventDefault();
       try {
-        await Axios.get(
-          `http://localhost:1127/test/`
-        );
-      
-      } catch (error) {
-        console.error(error);
+         const res = await Axios.post("http://localhost:3001/api/login", {
+            isUsername,
+            isPassword,
+         });
+         setMessage(`Login successful! Token: ${res.data.token}`);
+         // Save token to localStorage or state
+      } catch (err) {
+         setMessage("Login failed. " + err.response.data.msg);
       }
-    };
+   };
+
+   // const testbutton = async () => {
+   //    try {
+   //       await Axios.get(`http://localhost:1127/test/`);
+   //    } catch (error) {
+   //       console.error(error);
+   //    }
+   // };
 
    const togglePasswordVisibility = () => {
       if (isEye === "password") {
@@ -47,7 +56,7 @@ export default function Login() {
       <div>
          <div className="bg">
             <div className="d-flex justify-content-center align-items-center vh-100">
-               <form className="wrap-login p-5">
+               <form className="wrap-login p-5" onSubmit={handleSubmit}>
                   <span className="signin-title "> Sign in </span>
                   <div className="wrap-input w-100">
                      <span>Username</span>
@@ -60,7 +69,10 @@ export default function Login() {
                      />
                      <span className="icons" data-symbol="&#xf206;"></span>
                   </div>
-                  <div className="wrap-input" data-validate="Password is required">
+                  <div
+                     className="wrap-input"
+                     data-validate="Password is required"
+                  >
                      <span>Password</span>
                      <input
                         className="inputs"
@@ -75,7 +87,6 @@ export default function Login() {
                         onClick={togglePasswordVisibility}
                         data-symbol="&#xf15c;"
                      ></span>
-
                   </div>
 
                   <div className="form-group">
@@ -86,19 +97,19 @@ export default function Login() {
                         </label>
                      </div>
                      <div>
-                        <a href="#" className="hyperlink">Forgot Password</a>
+                        <a href="/" className="hyperlink">
+                           Forgot Password
+                        </a>
                      </div>
                   </div>
 
-
-                  <div className="btn-wrap "  onClick={testbutton}>
-                     <button className="btn-login">Login</button>
+                  <div className="btn-wrap " >
+                     <button className="btn-login" type="submit">Login</button>
                   </div>
-
-
+                  {message && <p>{message}</p>}
                   <div className="text-center pt-115">
                      <span className="mutedText">Don’t have an account?</span>
-                     <a className="hyperlink" href="/Register" >
+                     <a className="hyperlink" href="/Register">
                         Sign Up
                      </a>
                   </div>
