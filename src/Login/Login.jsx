@@ -23,9 +23,9 @@ export default function Login() {
    const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-         const res = await Axios.post("http://localhost:3001/api/login", {
-            isUsername,
-            isPassword,
+         const res = await Axios.post("http://localhost:1127/api/login", {
+            isUsername: isUsername,
+            isPassword: isPassword,
          });
          setMessage(`Login successful! Token: ${res.data.token}`);
          // Save token to localStorage or state
@@ -64,6 +64,7 @@ export default function Login() {
                         className="inputs"
                         type="text"
                         placeholder="Enter your username"
+                        value={isUsername}
                         required
                         onChange={(e) => setUsername(e.target.value)}
                      />
@@ -103,10 +104,13 @@ export default function Login() {
                      </div>
                   </div>
 
-                  <div className="btn-wrap " >
-                     <button className="btn-login" type="submit">Login</button>
+                  <div className="btn-wrap ">
+                     <button className="btn-login" type="submit">
+                        Login
+                     </button>
                   </div>
                   {message && <p>{message}</p>}
+
                   <div className="text-center pt-115">
                      <span className="mutedText">Don’t have an account?</span>
                      <a className="hyperlink" href="/Register">
