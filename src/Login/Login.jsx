@@ -4,6 +4,8 @@ import "../res/fonts/material.css";
 import "./Login.css";
 import Axios from "axios";
 
+import { useNavigate } from "react-router-dom";
+
 export default function Login() {
    const [isUsername, setUsername] = useState("");
    const [isPassword, setPassword] = useState("");
@@ -11,6 +13,7 @@ export default function Login() {
    const [isPlaceholderPW, setPlaceholderPW] = useState("*******************");
    const [isEye, setEye] = useState("password");
    const [message, setMessage] = useState("");
+   const navigate = useNavigate();
 
    const handleClosePopup = () => {
       setShowPopup(false);
@@ -28,19 +31,13 @@ export default function Login() {
             isPassword: isPassword,
          });
          setMessage(`Login successful! Token: ${res.data.token}`);
+         navigate("/Main");
+
          // Save token to localStorage or state
       } catch (err) {
          setMessage("Login failed. " + err.response.data.msg);
       }
    };
-
-   // const testbutton = async () => {
-   //    try {
-   //       await Axios.get(`http://localhost:1127/test/`);
-   //    } catch (error) {
-   //       console.error(error);
-   //    }
-   // };
 
    const togglePasswordVisibility = () => {
       if (isEye === "password") {

@@ -3,8 +3,6 @@ import Axios from "axios";
 import Alerts from "../Alerts/Alerts";
 
 export default function Register() {
-   const [isNote, setNote] = useState("");
-
    const [isUsername, setUsername] = useState("");
    const [isUname, setUname] = useState("");
    const [isPassword, setPassword] = useState("");
@@ -28,7 +26,7 @@ export default function Register() {
             userPassword: isPassword,
          });
          console.log("Successfully inserted");
-      } catch (error) { 
+      } catch (error) {
          console.error(error);
       }
    };
@@ -92,7 +90,13 @@ export default function Register() {
                   </div>
 
                   <div className="btn-wrap">
-                     <button className="btn-login" type="submit" onClick={handleSubmit}>Register</button>
+                     <button
+                        className="btn-login"
+                        type="submit"
+                        onClick={handleSubmit}
+                     >
+                        Register
+                     </button>
                   </div>
 
                   <div className="text-center pt-115">
