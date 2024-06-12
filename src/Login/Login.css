@@ -1,11 +1,11 @@
 /* START OF LOGIN */
 .bg {
-   background-color: var(--dark1);
+   background-color: var(--background);
 }
 
 .wrap-login {
    width: 500px;
-   background-color: rgba(40, 41, 61, 0.3);
+   background-color: var(--card-background);
    backdrop-filter: blur(30px);
    border-radius: 20px;
    padding-top: 65px;
@@ -50,7 +50,7 @@
 }
 
 .icons:hover {
-   color: #626bc2;
+   color: var(--primary);
 }
 
 .form-group {
@@ -63,7 +63,7 @@
 .btn-wrap {
    border-radius: 25px;
    overflow: hidden;
-   background-color: #555b96;
+   background-color: var(--primary);
    margin-top: 30px;
 }
 
@@ -77,7 +77,7 @@
 }
 
 .btn-login:hover {
-   color: wheat;
+   color: #fdd7d7;
    background-color: #626bc2;
 }
 
@@ -88,12 +88,12 @@
 .mutedText {
    font-size: 14px;
    line-height: 1.5;
-   color: #9e9e9e;
+   color: var(--muted-text);
 }
 .hyperlink {
    font-size: 14px;
    line-height: 1.5;
-   color: white;
+   color: var(--primary);
    text-transform: capitalize;
    margin-left: 5px;
    cursor: pointer;

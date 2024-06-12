@@ -1,34 +1,31 @@
 :root {
-    --delay: 0s;
-    --dark1: #1c1c28;
-    --dark2: #28293d;
-    --color-text: white;
-    --color-bg: #262942;
-    --color-shadow: rgba(0, 0, 0, 0.6);
-    --color-box: #555b96;
-    --color-box-hover: #3a3842;
-    --highlighs: #626bc2;
- }
- 
- * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Raleway, sans-serif;
-    outline: none;
-    color: var(--color-text);
- }
- 
- body {
-    -webkit-font-smoothing: antialiased;
- }
- 
- input[type="text"],
- input[type="password"] {
-    border-style: none;
- }
- 
- button {
-    border: none;
-    background: transparent;
- }
+   --background: #ecedff;
+   --card-background: rgba(255, 255, 255, 0.7);
+   --text: #2d3a40;
+   --muted-text: #6b767a;
+   --primary: #5155c3;
+   --secondary: #f78e5e;
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: Raleway, sans-serif;
+   outline: none;
+   color: var(--color-text);
+}
+
+body {
+   -webkit-font-smoothing: antialiased;
+}
+
+input[type="text"],
+input[type="password"] {
+   border-style: none;
+}
+
+button {
+   border: none;
+   background: transparent;
+}

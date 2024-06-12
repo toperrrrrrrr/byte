@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./Login/Login";
 import Register from "./Login/Register";
 import NotFound from "./components/NotFound";
+import MainContainer from "./BackOffice/MainContainer";
 
 function App() {
    return (
@@ -15,6 +16,7 @@ function App() {
             <Routes>
                <Route path="/" element={<Login />}></Route>
                <Route path="/Register" element={<Register />}></Route>
+               <Route path="/Backoffice" element={<MainContainer />}></Route>
                <Route path="*" element={<NotFound />} />
             </Routes>
          </Router>

@@ -31,7 +31,7 @@ export default function Login() {
             isPassword: isPassword,
          });
          setMessage(`Login successful! Token: ${res.data.token}`);
-         navigate("/Main");
+         navigate("/Backoffice");
 
          // Save token to localStorage or state
       } catch (err) {
