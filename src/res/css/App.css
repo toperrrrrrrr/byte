@@ -35,3 +35,8 @@
 span {
    background-color: transparent;
 }
+
+.colorize1 {
+   background-color: #5155c3;
+   border-style: ridge;
+}
