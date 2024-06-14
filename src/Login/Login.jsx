@@ -15,6 +15,9 @@ export default function Login() {
    const [message, setMessage] = useState("");
    const navigate = useNavigate();
 
+   const handleOpenPopup = () => {
+      setShowPopup(true);
+   };
    const handleClosePopup = () => {
       setShowPopup(false);
    };
@@ -35,6 +38,7 @@ export default function Login() {
 
          // Save token to localStorage or state
       } catch (err) {
+         handleOpenPopup();
          setMessage("Login failed. " + err.response.data.msg);
       }
    };
@@ -106,7 +110,7 @@ export default function Login() {
                         Login
                      </button>
                   </div>
-                  {message && <p>{message}</p>}
+ 
 
                   <div className="text-center pt-115">
                      <span className="mutedText">Don’t have an account?</span>
@@ -119,7 +123,7 @@ export default function Login() {
             <Alerts
                isOpen={showPopup}
                title="Wrong Credentials"
-               message="Please Double check"
+               message={message}
                onClose={handleClosePopup}
                isHidden="true"
                onConfirm={handleConfirmAction}
