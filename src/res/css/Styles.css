@@ -17,7 +17,6 @@
 }
 
 body {
-
    background: var(--background);
    font-family: "Open Sans", sans-serif;
    -webkit-font-smoothing: antialiased;
@@ -32,39 +31,6 @@ input[type="password"] {
 button {
    border: none;
    background: transparent;
-}
-
-
-
-
-
-
-
-
-.centered-container {
-   background-color: #dfe1e5;
-   width: 500px;
-
-   border-radius: 15px;
-   box-shadow: -50px 50px 25px #00000081;
-   padding: 20px;
-}
-
-.container-fluid {
-   padding: 10px;
-   padding-left: 30px;
-}
-
-.forms {
-   margin: 80px;
-}
-
-.form-group {
-   margin-top: 20px;
-}
-
-.btn {
-   margin-top: 10px;
 }
 
 .prevent-select {
@@ -83,16 +49,6 @@ button {
    user-select: text;
 }
 
-.sticky {
-   position: sticky;
-   top: 0;
-   z-index: 999;
-}
-
-.roundedDiv {
-   border-radius: 10px;
-}
-
 /* On screens that are 992px or less, set the background color to blue */
 @media screen and (max-width: 992px) {
    body {
@@ -104,33 +60,6 @@ button {
 @media screen and (max-width: 600px) {
    body {
       background-color: #507aa3;
-   }
-
-   .forms {
-      margin: 30px;
-   }
-
-   .centered-container {
-      background-color: #dfe1e5;
-      width: 400px;
-      height: 500px;
-      border-radius: 15px;
-      box-shadow: -50px 50px 25px #00000081;
-   }
-}
-
-/*--------------------------------------------------------------
-# MAIN
---------------------------------------------------------------*/
-#main {
-   margin-top: 60px;
-   padding: 20px 30px;
-   transition: all 0.3s;
-}
-
-@media (max-width: 1199px) {
-   #main {
-      padding: 20px;
    }
 }
 
@@ -171,8 +100,7 @@ button {
 }
 
 @media (min-width: 1200px) {
-   #main,
-   #footer {
+   #main {
       margin-left: 300px;
    }
 }
@@ -184,8 +112,7 @@ button {
 }
 
 @media (min-width: 1200px) {
-   .toggle-sidebar #main,
-   .toggle-sidebar #footer {
+   .toggle-sidebar #main{
       margin-left: 0;
    }
 

@@ -1,8 +1,11 @@
+import React from "react";
+
 import "./res/css/Styles.css";
 import "./res/css/Alerts.css";
 import "./res/css/404.css";
 import "./res/fonts/material.css";
 import "./res/css/Login.css";
+import "./res/css/MainContainer.css"
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
