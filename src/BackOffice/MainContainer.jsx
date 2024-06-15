@@ -1,48 +1,83 @@
 import React from "react";
 import "../res/css/App.css";
+import Sidebar from "./partials/Sidebar";
+import Navbar from "./partials/Navbar";
 
 export default function MainContainer() {
    return (
-      <div className="vh-100">
-         <div className="container mw-100 ">
-            <div className="row">
-               <div className="col-md-1 colorize1"></div>
-               <div className="col-md-11 colorize1 ">
-                  <form className="wrap-login p-5">
-                     <span className="signin-title "> Product line </span>
-                     <div className="wrap-input w-100">
-                        <span>Item name</span>
-                        <input className="inputs" type="text" required />
-                     </div>
-                     <div className="wrap-input w-100">
-                        <span>Description</span>
-                        <input className="inputs" type="text" required />
-                     </div>
-                     <div className="wrap-input w-100">
-                        <span>Display as</span>
-                        <input className="inputs" type="text" required />
-                     </div>
-                     <div className="wrap-input w-100">
-                        <span>Price</span>
-                        <input className="inputs" type="text" required />
-                     </div>
-                     <div className="wrap-input w-100">
-                        <span>Category</span>
-                        <input className="inputs" type="text" required />
-                     </div>
-                     <div className="wrap-input w-100">
-                        <span>Course</span>
-                        <input className="inputs" type="text" required />
-                     </div>
-                     <div className="btn-wrap">
-                        <button className="btn-login" type="submit">
-                           Register
-                        </button>
-                     </div>
-                  </form>
-               </div>
+      <>
+         <Navbar />
+         <Sidebar />
+
+         <main id="main" className="main">
+            <div className="pagetitle">
+               <nav>
+                  <ol className="breadcrumb">
+                     <li className="breadcrumb-item active" id="date"></li>
+                     <li className="breadcrumb-item" id="time"></li>
+                  </ol>
+               </nav>
             </div>
-         </div>
-      </div>
+
+            <section className="section dashboard">
+               <div className="row">
+                  <div className="col-lg-8">
+                     <div className="row">
+                        <div className="col-xxl-6 col-md-6">
+                           <div className="card info-card">
+                              <div className="card-body">
+                                 <h5 className="card-title">
+                                    Running Balance:{" "}
+                                 </h5>
+                                 <div className="d-flex align-items-center">
+                                    <div className="ps-3">
+                                       <h1>
+                                          <span>₱</span>
+                                       </h1>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div className="col-xxl-6 col-md-6">
+                           <div className="card info-card">
+                              <div className="card-body">
+                                 <h5 className="card-title">
+                                    Spent This Week:{" "}
+                                 </h5>
+                                 <div className="d-flex align-items-center">
+                                    <div className="ps-3">
+                                       <h1>
+                                          <span>₱</span>0
+                                       </h1>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div className="col-12"></div>
+
+                        <div className="col-12"></div>
+                     </div>
+                  </div>
+                  {/* <!-- End Left side columns --> */}
+
+                  {/* <!-- Right side columns --> */}
+                  <div className="col-lg-4">
+                     <div className="card"></div>
+                     <div className="card">
+                        <div className="card-body pb-0 ">
+                           <h5 className="card-title ">Let the wheel decide</h5>
+                           <div className="roulette-container">
+                              <div className="roulette"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </main>
+      </>
    );
 }

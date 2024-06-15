@@ -1,6 +1,7 @@
 import React from "react";
 import fourofour from "../res/imgs/missing-page.svg";
 
+
 export default function NotFound() {
    return (
       <div>

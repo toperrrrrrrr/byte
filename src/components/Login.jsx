@@ -1,7 +1,6 @@
 import { React, useState } from "react";
-import Alerts from "../Alerts/Alerts";
-import "../res/fonts/material.css";
-import "./Login.css";
+import Alerts from "./partials/Alerts";
+
 import Axios from "axios";
 
 import { useNavigate } from "react-router-dom";

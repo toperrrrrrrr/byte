@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Axios from "axios";
-import Alerts from "../Alerts/Alerts";
+import Alerts from "./partials/Alerts";
 
 export default function Register() {
    const [isUsername, setUsername] = useState("");
