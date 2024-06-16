@@ -7,6 +7,7 @@ import "./res/fonts/material.css";
 import "./res/css/Login.css";
 import "./res/css/MainContainer.css"
 
+import "jquery/dist/jquery"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import "bootstrap-icons/font/bootstrap-icons.css";

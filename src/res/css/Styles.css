@@ -17,7 +17,7 @@
 }
 
 body {
-   background: var(--background);
+   background: var(--primary);
    font-family: "Open Sans", sans-serif;
    -webkit-font-smoothing: antialiased;
    color: var(--color-text);

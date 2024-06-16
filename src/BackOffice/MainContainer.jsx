@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-import Sidebar from "./partials/Sidebar";
-import Navbar from "./partials/Navbar";
+import axios from "axios";
+
+// import Sidebar from "./partials/Sidebar";
+// import Navbar from "./partials/Navbar";
 import Todos from "./partials/Todos";
 
 export default function MainContainer() {
+   const [notes, setNotes] = useState([]);
+
+   useEffect(() => {
+      const fetchNotes = async () => {
+         try {
+            const response = await axios.get(
+               "http://localhost:1127/api/task/list"
+            );
+            setNotes(response.data);
+         } catch (error) {
+            console.error("Error fetching notes:", error);
+         }
+      };
+
+      fetchNotes();
+   }, []);
+
    return (
-      <>
+      <div className="bg">
          {/* <Navbar /> */}
          <header
             id="header"
@@ -32,11 +51,6 @@ export default function MainContainer() {
                         href="/"
                         data-bs-toggle="dropdown"
                      >
-                        <img
-                           src="/imgs/myphoto.png"
-                           alt="Profile"
-                           className="rounded-circle"
-                        />
                         <span className="d-none d-md-block ps-2">
                            N. Lacsina
                         </span>
@@ -63,7 +77,7 @@ export default function MainContainer() {
                </li>
 
                <li className="nav-item" disabled>
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="/">
                      <i className="bi bi-piggy-bank"></i>
                      <span>Contributions</span>
                   </a>
@@ -85,7 +99,6 @@ export default function MainContainer() {
                                     <div className="ps-3">
                                        <h1>
                                           <span>
-
                                              <Todos />
                                           </span>
                                        </h1>
@@ -98,7 +111,7 @@ export default function MainContainer() {
                            <div className="card info-card">
                               <div className="card-body">
                                  <h5 className="card-title">
-                                    Spent This Week:{" "}
+                                    Spent This Week:
                                  </h5>
                                  <div className="d-flex align-items-center">
                                     <div className="ps-3">
@@ -110,10 +123,6 @@ export default function MainContainer() {
                               </div>
                            </div>
                         </div>
-
-                        <div className="col-12"></div>
-
-                        <div className="col-12"></div>
                      </div>
                   </div>
 
@@ -121,13 +130,34 @@ export default function MainContainer() {
                      <div className="card">
                         <div className="card-body pb-0 ">
                            <h5 className="card-title ">Let the wheel decide</h5>
-                           <div className="roulette-container"></div>
+                           <div>
+                              <table>
+                                 <thead>
+                                    <tr>
+                                       <th>ID</th>
+                                       <th>Title</th>
+                                       <th>desc</th>
+                                       <th>status</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    {notes.map((todo) => (
+                                       <tr key={todo.task_id}>
+                                          <td>{todo.task_id}</td>
+                                          <td>{todo.task_title}</td>
+                                          <td>{todo.task_description}</td>
+                                          <td>{todo.task_status}</td>
+                                       </tr>
+                                    ))}
+                                 </tbody>
+                              </table>
+                           </div>
                         </div>
                      </div>
                   </div>
                </div>
             </section>
          </main>
-      </>
+      </div>
    );
 }
