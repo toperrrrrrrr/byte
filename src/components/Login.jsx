@@ -61,7 +61,7 @@ export default function Login() {
                   <div className="wrap-input w-100">
                      <span>Username</span>
                      <input
-                        className="inputs"
+                        className="inputs loginInput"
                         type="text"
                         placeholder="Enter your username"
                         value={isUsername}
@@ -76,7 +76,7 @@ export default function Login() {
                   >
                      <span>Password</span>
                      <input
-                        className="inputs"
+                        className="inputs loginInput"
                         type={isEye}
                         placeholder={isPlaceholderPW}
                         value={isPassword}
@@ -109,7 +109,6 @@ export default function Login() {
                         Login
                      </button>
                   </div>
- 
 
                   <div className="text-center pt-115">
                      <span className="mutedText">Don’t have an account?</span>

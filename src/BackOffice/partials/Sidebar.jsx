@@ -11,14 +11,12 @@ export default function Sidebar() {
                      <span>Dashboard</span>
                   </a>
                </li>
-
                <li className="nav-item">
                   <a className="nav-link" href="/Catalogue">
                      <i className="bi bi-egg-fried"></i>
                      <span>Catalogue</span>
                   </a>
                </li>
-
             </ul>
          </aside>
       </>

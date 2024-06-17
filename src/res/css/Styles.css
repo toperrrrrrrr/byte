@@ -27,8 +27,7 @@ body {
    color: var(--color-text);
 }
 
-input[type="text"],
-input[type="password"] {
+.loginInput {
    border-style: none;
 }
 

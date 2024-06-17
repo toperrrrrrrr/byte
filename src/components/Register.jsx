@@ -50,7 +50,7 @@ export default function Register() {
                   <div className="wrap-input w-100">
                      <span>Name</span>
                      <input
-                        className="inputs"
+                        className="inputs loginInput"
                         type="text"
                         placeholder="Enter your name"
                         required
@@ -61,7 +61,7 @@ export default function Register() {
                   <div className="wrap-input w-100">
                      <span>Username</span>
                      <input
-                        className="inputs"
+                        className="inputs loginInput"
                         type="text"
                         placeholder="Enter your username"
                         required
@@ -75,7 +75,7 @@ export default function Register() {
                   >
                      <span>Password</span>
                      <input
-                        className="inputs"
+                        className="inputs loginInput"
                         type={isEye}
                         placeholder={isPlaceholderPW}
                         value={isPassword}
