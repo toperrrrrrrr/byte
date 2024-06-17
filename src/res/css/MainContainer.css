@@ -5,6 +5,7 @@
    margin-top: 60px;
    padding: 20px 30px;
    transition: all 0.3s;
+   background-color: var(--background);
 }
 
 @media (max-width: 1199px) {
@@ -28,4 +29,170 @@ td {
 
 th {
    background-color: #f4f4f4;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+   body {
+      background-color: #5c8dbe;
+   }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+   body {
+      background-color: #507aa3;
+   }
+}
+
+/*--------------------------------------------------------------
+# SIDEBAR
+--------------------------------------------------------------*/
+
+.sidebar {
+   position: fixed;
+   top: 60px;
+   left: 0;
+   bottom: 0;
+   width: 300px;
+   z-index: 996;
+   transition: all 0.3s;
+   padding: 20px;
+   overflow-y: auto;
+   scrollbar-width: thin;
+   scrollbar-color: #aab7cf transparent;
+   box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+   background-color: var(--card);
+}
+
+@media (max-width: 1199px) {
+   .sidebar {
+      left: -300px;
+   }
+}
+
+@media (min-width: 1200px) {
+   #main {
+      margin-left: 300px;
+   }
+}
+
+.sidebar-nav {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+}
+
+.sidebar-nav li {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+}
+
+.sidebar-nav .nav-item {
+   margin-bottom: 5px;
+}
+
+.sidebar-nav .nav-heading {
+   font-size: 11px;
+   text-transform: uppercase;
+   color: #899bbd;
+   font-weight: 600;
+   margin: 10px 0 5px 15px;
+}
+
+.sidebar-nav .nav-link {
+   display: flex;
+   align-items: center;
+   font-size: 15px;
+   font-weight: 600;
+   color: var(--primary);
+   transition: 0.3;
+   padding: 10px 15px;
+   border-radius: 4px;
+}
+
+.sidebar-nav .nav-link i {
+   font-size: 16px;
+   margin-right: 10px;
+   color: var(--primary);
+}
+
+.sidebar-nav .nav-link:hover {
+   color: var(--primary-hover);
+   background: var(--background);
+}
+
+.sidebar-nav .nav-link:hover i {
+   color: var(--primary-hover);
+}
+
+/*--------------------------------------------------------------
+# Card
+--------------------------------------------------------------*/
+
+.card {
+   margin-bottom: 30px;
+   border: none;
+   border-radius: 12px;
+   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
+.card-header,
+.card-footer {
+   border-color: #ebeef4;
+   background-color: #fff;
+   color: #798eb3;
+   padding: 15px;
+}
+
+.card-title {
+   padding: 20px 0 15px 0;
+   font-size: 18px;
+   font-weight: 500;
+   color: #012970;
+   font-family: "Poppins", sans-serif;
+}
+
+.card-title span {
+   color: #899bbd;
+   font-size: 14px;
+   font-weight: 400;
+}
+
+.card-body {
+   padding: 0 20px 20px 20px;
+}
+
+.card-img-overlay {
+   background-color: rgba(255, 255, 255, 0.6);
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.logo {
+   line-height: 1;
+}
+
+@media (min-width: 1200px) {
+   .logo {
+      width: 280px;
+   }
+}
+
+.logo span {
+   font-size: 26px;
+   font-weight: 700;
+   color: #012970;
+   font-family: "Nunito", sans-serif;
+}
+
+.header {
+   transition: all 0.5s;
+   z-index: 997;
+   height: 60px;
+   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+   background-color: #fff;
+   padding-left: 20px;
 }
