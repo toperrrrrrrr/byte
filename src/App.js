@@ -17,7 +17,6 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import NotFound from "./components/NotFound";
 import MainContainer from "./BackOffice/MainContainer";
-import Catalogue from "./BackOffice/Catalogue";
 
 function App() {
    return (
@@ -27,7 +26,6 @@ function App() {
                <Route path="/" element={<Login />}></Route>
                <Route path="/Register" element={<Register />}></Route>
                <Route path="/Backoffice" element={<MainContainer />}></Route>
-               <Route path="/Catalogue" element={<Catalogue />}></Route>
                <Route path="*" element={<NotFound />} />
             </Routes>
          </Router>

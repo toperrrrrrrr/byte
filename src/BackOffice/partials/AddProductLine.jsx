@@ -27,7 +27,9 @@ export default function AddProductLine() {
                <h5 className="card-title">Add new products</h5>
                <form>
                   <div className="row mb-3">
-                     <label className="col-sm-3 col-form-label">Name</label>
+                     <label for="inputText" className="col-sm-3 col-form-label">
+                        Name
+                     </label>
                      <div className="col-sm-9">
                         <input
                            type="text"
@@ -37,7 +39,9 @@ export default function AddProductLine() {
                      </div>
                   </div>
                   <div className="row mb-3">
-                     <label className="col-sm-3 col-form-label">Price</label>
+                     <label for="inputText" className="col-sm-3 col-form-label">
+                        Price
+                     </label>
                      <div className="col-sm-9">
                         <input
                            type="text"
@@ -47,7 +51,10 @@ export default function AddProductLine() {
                      </div>
                   </div>
                   <div className="row mb-3">
-                     <label className="col-sm-3 col-form-label">
+                     <label
+                        for="inputPassword"
+                        className="col-sm-3 col-form-label"
+                     >
                         Description
                      </label>
                      <div className="col-sm-9">

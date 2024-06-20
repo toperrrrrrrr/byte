@@ -1,122 +1,55 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useState } from "react";
 
-import axios from "axios";
-
+import Dashboard from "./partials/Dashboard";
 import Navbar from "./partials/Navbar";
-import Sidebar from "./partials/Sidebar";
-import Todos from "./partials/Todos";
+import Catalogue from "./partials/Catalogue";
 
 export default function MainContainer() {
-   const [notes, setNotes] = useState([]);
+   const [activeView, setActiveView] = useState("dashboard");
 
-   useEffect(() => {
-      const fetchNotes = async () => {
-         try {
-            const response = await axios.get(
-               "http://localhost:1127/api/task/list"
-            );
-            setNotes(response.data);
-         } catch (error) {
-            console.error("Error fetching notes:", error);
-         }
-      };
+   const renderView = () => {
+      switch (activeView) {
+         case "Dashboard":
+            return <Dashboard />;
+         case "Catalogue":
+            return <Catalogue />;
 
-      fetchNotes();
-   }, []);
+         default:
+            return <Dashboard />;
+      }
+   };
 
    return (
       <div className="bg">
          <Navbar />
-         <Sidebar />
+         <aside id="sidebar" className="sidebar">
+            <ul className="sidebar-nav" id="sidebar-nav">
+               <li className="nav-item">
+                  <a
+                     className="nav-link"
+                     href="#"
+                     onClick={() => setActiveView("Dashboard")}
+                  >
+                     <i className="bi bi-grid"></i>
+                     <span>Dashboard</span>
+                  </a>
+               </li>
+               <li className="nav-item">
+                  <a
+                     className="nav-link"
+                     href="#"
+                     onClick={() => setActiveView("Catalogue")}
+                  >
+                     <i className="bi bi-egg-fried"></i>
+                     <span>Catalogue</span>
+                  </a>
+               </li>
+            </ul>
+         </aside>
 
          <main id="main" className="main vh-100">
-            <section className="section dashboard">
-               <div className="row">
-                  <div className="col-lg-8">
-                     <div className="row">
-                        <div className="col-xxl-4 col-md-4">
-                           <div className="card info-card">
-                              <div className="card-body">
-                                 <h5 className="card-title">
-                                    Save tasks:
-                                 </h5>
-                                 <div className="d-flex align-items-center">
-                                    <div className="ps-3">
-                                       <h1>
-                                          <span>
-                                             <Todos />
-                                          </span>
-                                       </h1>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div className="col-xxl-4 col-md-4">
-                           <div className="card info-card">
-                              <div className="card-body">
-                                 <h5 className="card-title">
-                                    Spent This Week:
-                                 </h5>
-                                 <div className="d-flex align-items-center">
-                                    <div className="ps-3">
-                                       <h1>
-                                          <span>₱</span>0
-                                       </h1>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>{" "}
-                        <div className="col-xxl-4 col-md-4">
-                           <div className="card info-card">
-                              <div className="card-body">
-                                 <h5 className="card-title">
-                                    Spent This Week:
-                                 </h5>
-                                 <div className="d-flex align-items-center">
-                                    <div className="ps-3">
-                                       <h1>
-                                          <span>₱</span>0
-                                       </h1>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="col-lg-4">
-                     <div className="card">
-                        <div className="card-body pb-0 ">
-                           <h5 className="card-title ">Sum title</h5>
-                           <div>
-                              <table>
-                                 <thead>
-                                    <tr>
-                                       <th>ID</th>
-                                       <th>Title</th>
-                                       <th>desc</th>
-                                       <th>status</th>
-                                    </tr>
-                                 </thead>
-                                 <tbody>
-                                    {notes.map((todo) => (
-                                       <tr key={todo.task_id}>
-                                          <td>{todo.task_id}</td>
-                                          <td>{todo.task_title}</td>
-                                          <td>{todo.task_description}</td>
-                                          <td>{todo.task_status}</td>
-                                       </tr>
-                                    ))}
-                                 </tbody>
-                              </table>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
+            <section className="section dashboard">{renderView()}</section>
          </main>
       </div>
    );
