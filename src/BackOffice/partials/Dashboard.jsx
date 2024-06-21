@@ -73,8 +73,7 @@ export default function Dashboard() {
          </div>
          <div className="col-lg-4">
             <div className="card">
-               <div className="card-body pb-0 ">
-                  <h5 className="card-title ">Sum title</h5>
+               <div className="card-body pb-0">
                   <div>
                      <table>
                         <thead>

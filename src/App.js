@@ -23,9 +23,9 @@ function App() {
       <>
          <Router>
             <Routes>
-               <Route path="/" element={<Login />}></Route>
+               <Route path="/" element={<MainContainer />}></Route>
                <Route path="/Register" element={<Register />}></Route>
-               <Route path="/Backoffice" element={<MainContainer />}></Route>
+               <Route path="/Backoffice" element={< Login/>}></Route>
                <Route path="*" element={<NotFound />} />
             </Routes>
          </Router>
