@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 import axios from "axios";
-export default function AddProductLine() {
+
+export default function AddProductLine({ fetchPls }) {
    const [isName, setName] = useState("");
    const [isPrice, setPrice] = useState("");
    const [isDesc, setDesc] = useState("");
@@ -16,6 +17,7 @@ export default function AddProductLine() {
             isDisplayAs: isDisplayAs,
          });
          console.log("Successfully inserted");
+         fetchPls();
       } catch (error) {
          console.error(error);
       }
@@ -69,10 +71,11 @@ export default function AddProductLine() {
                         Display As
                      </label>
                      <div className="col-sm-9">
-                        <textarea
+                        <input
+                           type="text"
                            className="form-control"
                            onChange={(e) => setDisplayAs(e.target.value)}
-                        ></textarea>
+                        ></input>
                      </div>
                   </div>
                   <div className="row mb-3">
