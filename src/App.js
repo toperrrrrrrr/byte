@@ -17,6 +17,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import NotFound from "./components/NotFound";
 import MainContainer from "./BackOffice/MainContainer";
+import Item from "./BackOffice/partials/Item";
 
 function App() {
    return (
@@ -25,7 +26,8 @@ function App() {
             <Routes>
                <Route path="/" element={<MainContainer />}></Route>
                <Route path="/Register" element={<Register />}></Route>
-               <Route path="/Backoffice" element={< Login/>}></Route>
+               <Route path="/Backoffice" element={<Login />}></Route>
+               <Route path="/item/:productId" element={<Item />} />
                <Route path="*" element={<NotFound />} />
             </Routes>
          </Router>

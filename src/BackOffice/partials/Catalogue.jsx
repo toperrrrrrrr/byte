@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import AddProductLine from "./AddProductLine";
 
 export default function Catalogue() {
@@ -22,11 +23,11 @@ export default function Catalogue() {
 
    const handleDelete = async (productId) => {
       try {
-         const response = await axios.get(
+         const response = await axios.delete(
             `http://localhost:1127/api/delete/${productId}`
          );
          console.log(response.data);
-         fetchPls();
+         fetchPls(); // Refresh the product lines list
       } catch (error) {
          console.error("Error deleting product line:", error);
       }
@@ -51,9 +52,9 @@ export default function Catalogue() {
                         {productLines.map((productLine) => (
                            <tr key={productLine.pl_id}>
                               <td>
-                                 <a href={`/item/${productLine.pl_id}`}>
+                                 <Link to={`/item/${productLine.pl_id}`}>
                                     {productLine.pl_name}
-                                 </a>
+                                 </Link>
                               </td>
                               <td>{productLine.pl_price}</td>
                               <td>{productLine.pl_description}</td>
@@ -62,7 +63,7 @@ export default function Catalogue() {
                                     onClick={() =>
                                        handleDelete(productLine.pl_id)
                                     }
-                                    className="btn btn-primary"
+                                    className="btn btn-danger"
                                  >
                                     Delete
                                  </button>
