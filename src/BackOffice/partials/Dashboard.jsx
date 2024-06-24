@@ -41,34 +41,6 @@ export default function Dashboard() {
                      </div>
                   </div>
                </div>
-               <div className="col-xxl-4 col-md-4">
-                  <div className="card info-card">
-                     <div className="card-body">
-                        <h5 className="card-title">Spent This Week:</h5>
-                        <div className="d-flex align-items-center">
-                           <div className="ps-3">
-                              <h1>
-                                 <span>₱</span>0
-                              </h1>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>{" "}
-               <div className="col-xxl-4 col-md-4">
-                  <div className="card info-card">
-                     <div className="card-body">
-                        <h5 className="card-title">Spent This Week:</h5>
-                        <div className="d-flex align-items-center">
-                           <div className="ps-3">
-                              <h1>
-                                 <span>₱</span>0
-                              </h1>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
             </div>
          </div>
          <div className="col-lg-4">

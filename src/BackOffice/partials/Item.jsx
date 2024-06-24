@@ -31,25 +31,28 @@ export default function Item() {
       <div>
          <div className="card">
             <div className="card-body">
-               <table className="table datatable">
-                  <thead>
-                     <tr>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Description</th>
-                        <th>Delete</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     {productLine.map((productLine) => (
-                        <tr key={productLine.pl_id}>
-                           <td>{productLine.pl_name}</td>
-                           <td>{productLine.pl_price}</td>
-                           <td>{productLine.pl_description}</td>
+               {productLine.length === 0 ? (
+                  <p>No product lines available.</p>
+               ) : (
+                  <table className="table datatable">
+                     <thead>
+                        <tr>
+                           <th>Name</th>
+                           <th>Price</th>
+                           <th>Description</th>
                         </tr>
-                     ))}
-                  </tbody>
-               </table>
+                     </thead>
+                     <tbody>
+                        {productLine.map((productLine) => (
+                           <tr key={productLine.pl_id}>
+                              <td>{productLine.pl_name}</td>
+                              <td>{productLine.pl_price}</td>
+                              <td>{productLine.pl_description}</td>
+                           </tr>
+                        ))}
+                     </tbody>
+                  </table>
+               )}
             </div>
          </div>
       </div>
