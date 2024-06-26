@@ -53,6 +53,21 @@ export default function Item() {
                      </tbody>
                   </table>
                )}
+               {productLine.map((productLine) => (
+                  <div className="card" key={productLine.pl_id}>
+                     <div className="card-header">
+                        <div className="card-body">
+                           <input type="text" value={productLine.pl_name} />
+                           <input type="text" value={productLine.pl_price} />
+                           <input
+                              type="text"
+                              value={productLine.pl_description}
+                           />
+                           <button type="submit" className="btn btn-primary"> Submit </button>
+                        </div>
+                     </div>
+                  </div>
+               ))}
             </div>
          </div>
       </div>

@@ -50,7 +50,7 @@ export default function MainContainer() {
                      <span>Catalogue</span>
                   </a>
                </li>
-               <li className="nav-item">
+               <li className="nav-item disabled">
                   <a
                      className="nav-link"
                      href="#"
@@ -60,7 +60,7 @@ export default function MainContainer() {
                      <span>Promotions</span>
                   </a>
                </li>
-               <li className="nav-item">
+               <li className="nav-item disabled">
                   <a
                      className="nav-link"
                      href="#"
@@ -70,7 +70,7 @@ export default function MainContainer() {
                      <span>Pricing</span>
                   </a>
                </li>
-               <li className="nav-item">
+               <li className="nav-item disabled">
                   <a
                      className="nav-link"
                      href="#"
@@ -80,7 +80,7 @@ export default function MainContainer() {
                      <span>Reporting</span>
                   </a>
                </li>
-               <li className="nav-item">
+               <li className="nav-item disabled">
                   <a
                      className="nav-link"
                      href="#"

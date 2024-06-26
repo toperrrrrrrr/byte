@@ -16,8 +16,7 @@ export default function AddProductLine({ fetchPls }) {
             isDesc: isDesc,
             isDisplayAs: isDisplayAs,
          });
-         console.log("Successfully inserted");
-         fetchPls();
+         console.log("Successfully inserted");  
       } catch (error) {
          console.error(error);
       }
@@ -25,7 +24,7 @@ export default function AddProductLine({ fetchPls }) {
    return (
       <div className="col-lg-5">
          <div className="card">
-            <div className="card-body">
+            <div className="card-body"> 
                <h5 className="card-title">Add new products</h5>
                <form>
                   <div className="row mb-3">
