@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import axios from "axios";
 import Todos from "./Todos";
+import BarChart from "../BarChart";
 
 export default function Dashboard() {
    const [notes, setNotes] = useState([]);
@@ -37,6 +38,17 @@ export default function Dashboard() {
                                  </span>
                               </h1>
                            </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div className="col-xxl-8 col-md-8">
+                  <div className="card info-card">
+                     <div className="card-body">
+                        <h5 className="card-title">Save tasks:</h5>
+                        <div className="d-flex align-items-center">
+                           <canvas id="lineChart" ></canvas>
+                           <BarChart />
                         </div>
                      </div>
                   </div>

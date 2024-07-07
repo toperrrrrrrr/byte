@@ -53,21 +53,22 @@ export default function Item() {
                      </tbody>
                   </table>
                )}
+{/* Add a way to upload an image */}
                {productLine.map((productLine) => (
                   <div className="card" key={productLine.pl_id}>
-                     <div className="card-header">
+                     <div className="card width400" >
+                        <img className="card-img-top " src="https://www.w3schools.com/bootstrap5/img_avatar1.png" alt="Card image" />
                         <div className="card-body">
-                           <input type="text" value={productLine.pl_name} />
-                           <input type="text" value={productLine.pl_price} />
-                           <input
-                              type="text"
-                              value={productLine.pl_description}
-                           />
-                           <button type="submit" className="btn btn-primary"> Submit </button>
+                           <h4 className="card-title">{productLine.pl_name}</h4>
+                           <p className="card-text">{productLine.pl_price}</p>
+                           <p className="card-text">{productLine.pl_description}</p>
+                           <a href="#" className="btn btn-primary">Add to cart</a>
                         </div>
                      </div>
                   </div>
+
                ))}
+
             </div>
          </div>
       </div>
