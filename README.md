@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Hari
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hari is a simple POINT OF SALE SYSTEM created for the purpose of learning and using my time in more useful and productive manner. The project is a web application that allows users to create, update, and delete items and product lines. It also includes a login page and a home page.
 
-## Available Scripts
+The project is built using React, Node.js, Express, and MySQL. It uses axios for making HTTP requests and Bootstrap for styling.
 
-In the project directory, you can run:
+The project is hosted on Vecrel and can be accessed at:
 
-### `npm start`
+The following pages are included in the project:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Create sessions.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Login page
+2. Home page
+3. Create Items page
+4. Update Items page
+5. Delete Items page
+6. Create Product Lines page
+7. Update Product Lines page
+8. Delete Product Lines page
+9. Create Users page
+10.   Update Users page
+11.   Delete Users page
+12.   Sales page
+13.   Reports page
+14.   Profile page
+15.   Logout page
 
-### `npm test`
+# Project Management
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tasks
 
-### `npm run build`
+-  [ ] Create a GitHub Project Board for the project
+-  [ ] Create a Kanban Board for the project
+-  [ ] Create a project plan with milestones and deadlines
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Organization
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-  [ ] Create a project repository
+-  [ ] Define roles and responsibilities for the project
+-  [ ] Set up a project governance structure
+-  [ ] Create a project team
+-  [ ] Define project communication channels
+-  [ ] Establish project standards and guidelines
+-  [ ] Set up project documentation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Collaboration
 
-### `npm run eject`
+-  [ ] Set up version control for the project
+-  [ ] Create a project backlog
+-  [ ] Set up a project issue tracker
+-  [ ] Define project code review process
+-  [ ] Create a project wiki
+-  [ ] Set up project meetings and agendas
+-  [ ] Define project testing process
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Planning
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-  [ ] Define project requirements and scope
+-  [ ] Create a project roadmap
+-  [ ] Set up project sprint planning and retrospective
+-  [ ] Define project user stories and acceptance criteria
+-  [ ] Create a project architecture diagram
+-  [ ] Set up project coding standards
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Execution
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-  [ ] Assign tasks to project team members
+-  [ ] Set up project task tracking system
+-  [ ] Create a project bug tracking system
+-  [ ] Set up project continuous integration and deployment process
+-  [ ] Create a project release plan
+-  [ ] Set up project testing environment
 
-## Learn More
+## Monitoring and Control
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-  [ ] Set up project monitoring and alerting system
+-  [ ] Create a project change management process
+-  [ ] Set up project risk management process
+-  [ ] Create a project performance measurement and reporting system
+-  [ ] Set up project quality assurance process
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Closure
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-  [ ] Conduct project post-mortem analysis
+-  [ ] Create a project lessons learned document
+-  [ ] Set up project knowledge sharing process
+-  [ ] Close project repository
+-  [ ] Archive project artifacts
